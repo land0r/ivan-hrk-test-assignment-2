@@ -36,7 +36,7 @@ Make sure you have the following installed on your system:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/awesome-motive-test-assignment.git
+   git clone https://github.com/land0r/ivan-hrk-test-assignment-2.git
    cd awesome-motive-test-assignment
    ```
 2. Install dependencies:
