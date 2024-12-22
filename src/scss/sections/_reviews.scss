@@ -16,7 +16,7 @@
       margin-bottom: 50px;
     }
 
-    .reviews__item {
+    &__item {
       flex: 0 0 calc(33% - 31px);
       box-sizing: border-box;
       padding: 30px;
@@ -31,20 +31,20 @@
         margin: 0 auto;
       }
 
-      .reviews__quote {
+      &__quote {
         margin: 0 0 15px;
         color: variables.$secondary-text-color;
         font-size: variables.$font-size-sm;
         line-height: 1.5;
       }
 
-      .reviews__footer {
+      &__footer {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
 
-        .reviews__author {
+        &__author {
           margin: 0;
           color: variables.$hint-text-color;
           font-size: variables.$font-size-hint;

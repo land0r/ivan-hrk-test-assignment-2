@@ -14,7 +14,7 @@
     margin: 0;
     position: relative;
 
-    img.hero__badge {
+    img.&__badge {
       position: absolute;
       top: 0;
     }
@@ -67,7 +67,7 @@
       max-width: 656px;
       margin: -30px auto 0;
 
-      .hero__title {
+      &__title {
         margin: 20px 0;
         font-size: variables.$font-size-xl;
         font-weight: 400;
@@ -78,7 +78,7 @@
         }
       }
 
-      .hero__description {
+      &__description {
         margin: 0;
         font-size: 26px;
         line-height: 1.5;
