@@ -34,11 +34,11 @@
     margin-bottom: 50px;
     padding: 50px;
     border-radius: 6px;
-    box-shadow: 0 10px 50px 0 #00000026;
+    box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.15);
     background: variables.$white-color;
 
     @include mixins.respond-to(medium) {
-      padding: 15px;
+      padding: 50px 25px;
       max-width: 720px;
       margin: 0 auto;
     }

@@ -8,6 +8,14 @@
     justify-content: center;
 
     @include mixins.respond-to(medium) {
+      flex-direction: row;
+
+      .grid__item {
+        flex: 0 0 calc(50% - 20px);
+      }
+    }
+
+    @include mixins.respond-to(small) {
       flex-direction: column;
     }
   }

@@ -65,6 +65,10 @@
       align-items: center;
       justify-content: center;
       height: 48px;
+
+      img {
+        max-height: 100%;
+      }
     }
 
     .grid__item-content {

@@ -10,6 +10,7 @@
     flex-wrap: wrap;
     gap: 50px;
     margin-bottom: 100px;
+    justify-content: space-between;
 
     @include mixins.respond-to(medium) {
       margin-bottom: 50px;

@@ -24,12 +24,13 @@
     .summary__images {
       display: flex;
       flex-direction: row;
-      gap: 25px;
+      gap: 50px;
+      flex-wrap: wrap;
 
       .summary__image {
-        flex: 0 0 50%;
-        width: 50%;
-        box-shadow: 0 5px 25px 0 #00000026;
+        flex: 0 0 calc(50% - 25px);
+        width: calc(50% - 25px);
+        box-shadow: 0 5px 25px 0 rgba(0, 0, 0, 0.15);
         border-radius: 6px;
       }
 
