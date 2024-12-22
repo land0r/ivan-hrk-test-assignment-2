@@ -37,8 +37,8 @@ export function styles() {
 export function scripts() {
 	return gulp
 		.src(paths.scripts.src)
-		.pipe(gulp.dest(paths.scripts.dest))
 		.pipe(uglify())
+		.pipe(gulp.dest(paths.scripts.dest))
 		.pipe(browserSync.stream());
 }
 
