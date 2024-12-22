@@ -1,0 +1,54 @@
+@use "../base/variables" as variables;
+@use "../base/mixins" as mixins;
+
+.reviews {
+  background: linear-gradient(180deg, variables.$light-gray-color 0%, variables.$white-color 100%);
+
+  .reviews__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 50px;
+    margin-bottom: 100px;
+
+    @include mixins.respond-to(medium) {
+      margin-bottom: 50px;
+    }
+
+    .reviews__item {
+      flex: 0 0 calc(33% - 31px);
+      box-sizing: border-box;
+      padding: 30px;
+      border-radius: 6px;
+      border: 1px solid variables.$border-color;
+      background: variables.$white-color;
+
+      @include mixins.respond-to(medium) {
+        flex: 0 0 100%;
+        max-width: 640px;
+        margin: 0 auto;
+      }
+
+      .reviews__quote {
+        margin: 0 0 15px;
+        color: variables.$secondary-text-color;
+        font-size: variables.$font-size-sm;
+        line-height: 1.5;
+      }
+
+      .reviews__footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        .reviews__author {
+          margin: 0;
+          color: variables.$hint-text-color;
+          font-size: variables.$font-size-hint;
+          line-height: 1.2;
+        }
+      }
+    }
+  }
+}

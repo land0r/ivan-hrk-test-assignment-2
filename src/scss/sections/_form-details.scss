@@ -1,0 +1,54 @@
+@use "../base/variables" as variables;
+@use "../base/mixins" as mixins;
+
+.form-details {
+  background: variables.$light-gray-color;
+
+  .form-details__container {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+
+    @include mixins.respond-to(medium) {
+      flex-direction: column;
+    }
+
+    .form-details__image,
+    .form-details__content {
+      flex: 0 0 50%;
+      box-sizing: border-box;
+    }
+
+    .form-details__image {
+      @include mixins.respond-to(medium) {
+        margin: 0 auto;
+      }
+
+      img {
+        width: auto;
+        max-width: 100%;
+        box-shadow: 0 10px 30px 0 #0000001A;
+        border-radius: 6px;
+      }
+    }
+
+    .form-details__content {
+      @include mixins.respond-to(medium) {
+        max-width: 500px;
+        margin: 0 auto;
+      }
+
+      h2.form-details__title {
+        font-size: 32px;
+        line-height: 38.4px;
+        margin-bottom: 20px;
+      }
+
+      p.form-details__text {
+        color: variables.$secondary-text-color;
+        font-size: variables.$font-size-md;
+        line-height: 28px;
+      }
+    }
+  }
+}

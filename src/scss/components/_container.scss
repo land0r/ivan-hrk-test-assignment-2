@@ -1,0 +1,14 @@
+@use "../base/mixins";
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+
+  &--narrow {
+    max-width: 630px;
+  }
+
+  @include mixins.respond-to(medium) {
+    padding: 25px;
+  }
+}

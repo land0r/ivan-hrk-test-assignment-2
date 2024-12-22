@@ -1,0 +1,32 @@
+{
+  "name": "awesome-motive-test-assignment",
+  "version": "1.0.0",
+  "description": "A test assignment for Awesome Motive. Responsive landing page using modern tools.",
+  "main": "gulpfile.js",
+  "scripts": {
+    "start": "gulp",
+    "build": "gulp build",
+    "watch": "gulp watch"
+  },
+  "keywords": [
+    "awesome-motive",
+    "landing-page",
+    "gulp",
+    "sass",
+    "responsive"
+  ],
+  "author": "land0r",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^3.0.3",
+    "gulp": "^5.0.0",
+    "gulp-autoprefixer": "^9.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^9.1.0",
+    "gulp-sass": "^6.0.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-uglify": "^3.0.2",
+    "sass": "^1.83.0"
+  }
+}

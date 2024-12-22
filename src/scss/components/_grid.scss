@@ -1,0 +1,92 @@
+@use "../base/variables" as variables;
+@use "../base/mixins" as mixins;
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  @include mixins.respond-to(medium) {
+    flex-direction: column;
+  }
+
+  .grid__item {
+    flex: 0 0 31.35%;
+    text-align: center;
+    padding: 50px;
+    box-sizing: border-box;
+
+    @include mixins.respond-to(large) {
+      &:nth-child(-n + 3) {
+        padding-top: 0;
+      }
+
+      &:nth-child(3n + 1) {
+        padding-left: 0;
+      }
+
+      &:nth-child(3n) {
+        padding-right: 0;
+      }
+
+      &:nth-child(3n + 2) {
+        flex: 0 0 36.67%;
+        border-left: 1px solid variables.$border-color;
+        border-right: 1px solid variables.$border-color;
+      }
+
+      &:nth-child(n + 4) {
+        border-top: 1px solid variables.$border-color;
+      }
+
+      &:nth-last-child(-n + 3) {
+        padding-bottom: 0;
+
+        .grid__item-content {
+          p.grid__description {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+
+    @include mixins.respond-to(medium) {
+      flex: 0 0 100%;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+
+    @include mixins.respond-to(small) {
+      flex: 0 0 100%;
+    }
+
+    .grid__icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 48px;
+    }
+
+    .grid__item-content {
+      @include mixins.respond-to(medium) {
+        max-width: 500px;
+        margin: 0 auto;
+      }
+
+      h3.grid__title {
+        margin: 20px auto;
+        font-size: variables.$font-size-lg;
+        font-weight: 700;
+        font-family: variables.$font-text;
+        line-height: 30px;
+      }
+
+      p.grid__description {
+        font-size: variables.$font-size-sm;
+        font-weight: 400;
+        line-height: 1.5;
+        color: variables.$secondary-text-color;
+      }
+    }
+  }
+}

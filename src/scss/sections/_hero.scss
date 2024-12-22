@@ -1,0 +1,92 @@
+@use "../base/variables" as variables;
+@use "../base/mixins" as mixins;
+
+.hero {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-align: center;
+  background: linear-gradient(to bottom, variables.$light-gray-color 65%, variables.$white-color 65%);
+
+  h1.hero__title {
+    font-size: variables.$font-size-xl;
+    font-family: variables.$font-heading;
+    font-weight: 400;
+    margin: 0;
+    position: relative;
+
+    img.hero__badge {
+      position: absolute;
+      top: 0;
+    }
+  }
+
+  p.hero__description {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    color: variables.$secondary-text-color;
+    font-size: variables.$font-size-btn;
+    line-height: 28px;
+    opacity: 0.8;
+  }
+
+  .hero__video {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 50px;
+    border-radius: 6px;
+    box-shadow: 0 10px 50px 0 #00000026;
+    background: variables.$white-color;
+
+    @include mixins.respond-to(medium) {
+      padding: 15px;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    &.hero__video-player {
+      padding: 0;
+    }
+
+    .hero__video-play {
+      margin-top: -120px;
+
+      .hero__video-play-button {
+        border: 0;
+        background: none;
+        cursor: pointer;
+      }
+    }
+
+    img.hero__video-thumbnail {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .hero__video-content {
+      max-width: 656px;
+      margin: -30px auto 0;
+
+      h2.hero__title {
+        margin: 20px 0;
+        font-size: variables.$font-size-xl;
+        font-weight: 400;
+        font-family: variables.$font-heading;
+
+        @include mixins.respond-to(medium) {
+          font-size: 42px;
+        }
+      }
+
+      p.hero__description {
+        margin: 0;
+        font-size: 26px;
+        line-height: 1.5;
+        opacity: 0.75;
+
+        @include mixins.respond-to(medium) {
+          font-size: variables.$font-size-btn;
+        }
+      }
+    }
+  }
+}

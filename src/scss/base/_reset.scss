@@ -1,0 +1,25 @@
+@use "variables";
+@use "mixins";
+
+body {
+  margin: 0;
+  padding: 0;
+  color: variables.$primary-text-color;
+}
+
+section {
+  &.features,
+  &.reviews,
+  &.form-details,
+  &.summary {
+    padding: 100px 0;
+
+    @include mixins.respond-to(medium) {
+      padding: 50px 0;
+    }
+
+    @include mixins.respond-to(small) {
+      padding: 25px 0;
+    }
+  }
+}

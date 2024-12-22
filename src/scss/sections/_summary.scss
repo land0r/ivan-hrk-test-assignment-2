@@ -1,0 +1,54 @@
+@use "../base/variables" as variables;
+@use "../base/mixins" as mixins;
+
+.summary {
+  h2.summary__heading {
+    text-align: center;
+    font-size: variables.$font-size-lg;
+    line-height: 1.5;
+    margin-bottom: 15px;
+  }
+
+  .summary__text {
+    color: variables.$secondary-text-color;
+    text-align: center;
+    font-size: variables.$font-size-md;
+    margin: 0;
+  }
+
+  .container--narrow {
+    max-width: 744px;
+  }
+
+  .summary__container {
+    .summary__images {
+      display: flex;
+      flex-direction: row;
+      gap: 25px;
+
+      .summary__image {
+        flex: 0 0 50%;
+        width: 50%;
+        box-shadow: 0 5px 25px 0 #00000026;
+        border-radius: 6px;
+      }
+
+      @include mixins.respond-to(small) {
+        flex-direction: column;
+
+        .summary__image {
+          flex: 0 0 100%;
+          width: 100%;
+        }
+      }
+    }
+
+    .summary__heading {
+      margin: 100px 0;
+    }
+  }
+
+  .features__list {
+    margin-bottom: 100px;
+  }
+}
