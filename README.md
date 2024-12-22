@@ -20,7 +20,7 @@ A responsive landing page built as a test assignment for Awesome Motive. This pr
     - File concatenation, CSS minification, and JavaScript uglification.
     - Image optimization using `gulp-imagemin`.
     - Browser auto-refresh with **BrowserSync**.
-
+    - [BEM naming](https://getbem.com) for classes
 ---
 
 ## Getting Started
