@@ -3,7 +3,6 @@ import dartSass from "sass";
 import gulpSass from "gulp-sass";
 import cleanCSS from "gulp-clean-css";
 import uglify from "gulp-uglify";
-import imagemin from "gulp-imagemin";
 import concat from "gulp-concat";
 import autoprefixer from "gulp-autoprefixer";
 import sourcemaps from "gulp-sourcemaps";
@@ -21,10 +20,6 @@ const paths = {
 	scripts: {
 		src: "src/js/**/*.js",
 		dest: "dist/js",
-	},
-	images: {
-		src: "src/images/**/*",
-		dest: "dist/images",
 	},
 	html: {
 		src: "*.html",
@@ -56,11 +51,6 @@ export function scripts() {
 		.pipe(browserSync.stream());
 }
 
-// Optimize Images
-export function images() {
-	return gulp.src(paths.images.src).pipe(imagemin()).pipe(gulp.dest(paths.images.dest));
-}
-
 // Start Live Development Server
 export function serve() {
 	browserSync.init({
@@ -68,9 +58,8 @@ export function serve() {
 	});
 	gulp.watch(paths.styles.src, styles);
 	gulp.watch(paths.scripts.src, scripts);
-	gulp.watch(paths.images.src, images);
 	gulp.watch(paths.html.src).on("change", browserSync.reload);
 }
 
 // Default Task
-export default gulp.series(gulp.parallel(styles, scripts, images), serve);
+export default gulp.series(gulp.parallel(styles, scripts), serve);
