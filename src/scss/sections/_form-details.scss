@@ -41,7 +41,7 @@
 
       .form-details__title {
         font-size: 32px;
-        line-height: 38.4px;
+        line-height: 1.2;
         margin-top: 0;
         margin-bottom: 20px;
       }
@@ -49,7 +49,7 @@
       .form-details__text {
         color: variables.$secondary-text-color;
         font-size: variables.$font-size-md;
-        line-height: 28px;
+        line-height: 1.56;
       }
     }
   }
