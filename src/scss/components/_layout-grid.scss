@@ -1,7 +1,7 @@
 @use "../base/variables" as variables;
 @use "../base/mixins" as mixins;
 
-.grid {
+.layout-grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -42,8 +42,8 @@
       &:nth-last-child(-n + 3) {
         padding-bottom: 0;
 
-        .grid__item-content {
-          p.grid__description {
+        .layout-grid__item-content {
+          .layout-grid__description {
             margin-bottom: 0;
           }
         }
@@ -60,7 +60,7 @@
       flex: 0 0 100%;
     }
 
-    .grid__icon {
+    .layout-grid__icon {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -71,13 +71,13 @@
       }
     }
 
-    .grid__item-content {
+    .layout-grid__item-content {
       @include mixins.respond-to(medium) {
         max-width: 500px;
         margin: 0 auto;
       }
 
-      .grid__title {
+      .layout-grid__title {
         margin: 20px auto;
         font-size: variables.$font-size-lg;
         font-weight: 700;
@@ -85,7 +85,7 @@
         line-height: 1.25;
       }
 
-      .grid__description {
+      .layout-grid__description {
         font-size: variables.$font-size-sm;
         font-weight: 400;
         line-height: 1.5;
