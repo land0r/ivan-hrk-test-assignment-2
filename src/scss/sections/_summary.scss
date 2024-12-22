@@ -46,10 +46,18 @@
 
     .summary__heading {
       margin: 100px 0;
+
+      @include mixins.respond-to(medium) {
+        margin: 50px 0;
+      }
     }
   }
 
   .features__list {
     margin-bottom: 100px;
+
+    @include mixins.respond-to(medium) {
+      margin-bottom: 0;
+    }
   }
 }

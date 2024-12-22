@@ -18,6 +18,10 @@
       position: absolute;
       top: 0;
     }
+
+    @include mixins.respond-to(small) {
+      font-size: 40px;
+    }
   }
 
   &__description {
@@ -75,6 +79,10 @@
 
         @include mixins.respond-to(medium) {
           font-size: 42px;
+        }
+
+        @include mixins.respond-to(small) {
+          font-size: 36px;
         }
       }
 

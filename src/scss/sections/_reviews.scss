@@ -16,6 +16,10 @@
       margin-bottom: 50px;
     }
 
+    @include mixins.respond-to(medium) {
+      margin-bottom: 0;
+    }
+
     .reviews__item {
       flex: 0 0 calc(33% - 31px);
       box-sizing: border-box;
