@@ -26,7 +26,6 @@ const paths = {
 	},
 };
 
-// Compile SASS to CSS
 export function styles() {
 	return gulp
 		.src(paths.styles.src)
@@ -39,7 +38,6 @@ export function styles() {
 		.pipe(browserSync.stream());
 }
 
-// Minify JavaScript
 export function scripts() {
 	return gulp
 		.src(paths.scripts.src)
@@ -51,8 +49,7 @@ export function scripts() {
 		.pipe(browserSync.stream());
 }
 
-// Start Live Development Server
-export function serve() {
+function serve() {
 	browserSync.init({
 		server: "./",
 	});
@@ -61,5 +58,8 @@ export function serve() {
 	gulp.watch(paths.html.src).on("change", browserSync.reload);
 }
 
-// Default Task
-export default gulp.series(gulp.parallel(styles, scripts), serve);
+export const build = gulp.parallel(styles, scripts);
+export const start = gulp.series(build, serve);
+
+// Make 'build' the default task
+export default build;

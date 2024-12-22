@@ -4,9 +4,8 @@
   "description": "A test assignment for Awesome Motive. Responsive landing page using modern tools.",
   "main": "gulpfile.js",
   "scripts": {
-    "start": "gulp",
-    "build": "gulp build",
-    "watch": "gulp watch"
+    "start": "gulp start",
+    "build": "gulp build"
   },
   "type": "module",
   "keywords": [
