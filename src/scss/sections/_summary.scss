@@ -21,13 +21,13 @@
   }
 
   &__container {
-    &__images {
+    .summary__images {
       display: flex;
       flex-direction: row;
       gap: 50px;
       flex-wrap: wrap;
 
-      &__image {
+      .summary__image {
         flex: 0 0 calc(50% - 25px);
         width: calc(50% - 25px);
         box-shadow: 0 5px 25px 0 rgba(0, 0, 0, 0.15);
@@ -37,14 +37,14 @@
       @include mixins.respond-to(small) {
         flex-direction: column;
 
-        &__image {
+        .summary__image {
           flex: 0 0 100%;
           width: 100%;
         }
       }
     }
 
-    &__heading {
+    .summary__heading {
       margin: 100px 0;
     }
   }

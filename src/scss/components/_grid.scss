@@ -60,7 +60,7 @@
       flex: 0 0 100%;
     }
 
-    &__icon {
+    .grid__icon {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -71,13 +71,13 @@
       }
     }
 
-    &__item-content {
+    .grid__item-content {
       @include mixins.respond-to(medium) {
         max-width: 500px;
         margin: 0 auto;
       }
 
-      &__title {
+      .grid__title {
         margin: 20px auto;
         font-size: variables.$font-size-lg;
         font-weight: 700;
@@ -85,7 +85,7 @@
         line-height: 30px;
       }
 
-      &__description {
+      .grid__description {
         font-size: variables.$font-size-sm;
         font-weight: 400;
         line-height: 1.5;

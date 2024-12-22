@@ -14,7 +14,7 @@
     margin: 0;
     position: relative;
 
-    img.&__badge {
+    .hero__badge {
       position: absolute;
       top: 0;
     }
@@ -43,7 +43,7 @@
       margin: 0 auto;
     }
 
-    &.hero__video-player {
+    &-player {
       padding: 0;
       overflow: hidden;
     }
@@ -51,14 +51,14 @@
     &-play {
       margin-top: -120px;
 
-      .hero__video-play-button {
+      &-button {
         border: 0;
         background: none;
         cursor: pointer;
       }
     }
 
-    img.hero__video-thumbnail {
+    &-thumbnail {
       max-width: 100%;
       height: auto;
     }
@@ -67,7 +67,7 @@
       max-width: 656px;
       margin: -30px auto 0;
 
-      &__title {
+      .hero__title {
         margin: 20px 0;
         font-size: variables.$font-size-xl;
         font-weight: 400;
@@ -78,7 +78,7 @@
         }
       }
 
-      &__description {
+      .hero__description {
         margin: 0;
         font-size: 26px;
         line-height: 1.5;
