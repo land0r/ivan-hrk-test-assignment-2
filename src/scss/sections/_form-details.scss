@@ -4,7 +4,7 @@
 .form-details {
   background: variables.$light-gray-color;
 
-  .form-details__container {
+  &__container {
     display: flex;
     flex-direction: row;
     gap: 30px;
@@ -38,13 +38,13 @@
         margin: 0 auto;
       }
 
-      h2.form-details__title {
+      .form-details__title {
         font-size: 32px;
         line-height: 38.4px;
         margin-bottom: 20px;
       }
 
-      p.form-details__text {
+      .form-details__text {
         color: variables.$secondary-text-color;
         font-size: variables.$font-size-md;
         line-height: 28px;

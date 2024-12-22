@@ -10,7 +10,7 @@
     flex-direction: column;
   }
 
-  .grid__item {
+  &__item {
     flex: 0 0 31.35%;
     text-align: center;
     padding: 50px;
@@ -73,7 +73,7 @@
         margin: 0 auto;
       }
 
-      h3.grid__title {
+      .grid__title {
         margin: 20px auto;
         font-size: variables.$font-size-lg;
         font-weight: 700;
@@ -81,7 +81,7 @@
         line-height: 30px;
       }
 
-      p.grid__description {
+      .grid__description {
         font-size: variables.$font-size-sm;
         font-weight: 400;
         line-height: 1.5;

@@ -2,16 +2,13 @@
 @use "../base/mixins" as mixins;
 
 .features {
-  .features__list {
+  &__list {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 
     @include mixins.respond-to(medium) {
       flex-direction: column;
-    }
-
-    .features__item {
     }
   }
 }

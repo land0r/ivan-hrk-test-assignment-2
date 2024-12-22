@@ -2,14 +2,14 @@
 @use "../base/mixins" as mixins;
 
 .summary {
-  h2.summary__heading {
+  &__heading {
     text-align: center;
     font-size: variables.$font-size-lg;
     line-height: 1.5;
     margin-bottom: 15px;
   }
 
-  .summary__text {
+  &__text {
     color: variables.$secondary-text-color;
     text-align: center;
     font-size: variables.$font-size-md;
@@ -20,7 +20,7 @@
     max-width: 744px;
   }
 
-  .summary__container {
+  &__container {
     .summary__images {
       display: flex;
       flex-direction: row;

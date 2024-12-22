@@ -7,7 +7,7 @@
   text-align: center;
   background: linear-gradient(to bottom, variables.$light-gray-color 65%, variables.$white-color 65%);
 
-  h1.hero__title {
+  &__title {
     font-size: variables.$font-size-xl;
     font-family: variables.$font-heading;
     font-weight: 400;
@@ -20,7 +20,7 @@
     }
   }
 
-  p.hero__description {
+  &__description {
     margin-top: 40px;
     margin-bottom: 40px;
     color: variables.$secondary-text-color;
@@ -29,7 +29,7 @@
     opacity: 0.8;
   }
 
-  .hero__video {
+  &__video {
     margin-top: 50px;
     margin-bottom: 50px;
     padding: 50px;
@@ -45,9 +45,10 @@
 
     &.hero__video-player {
       padding: 0;
+      overflow: hidden;
     }
 
-    .hero__video-play {
+    &-play {
       margin-top: -120px;
 
       .hero__video-play-button {
@@ -62,11 +63,11 @@
       height: auto;
     }
 
-    .hero__video-content {
+    &-content {
       max-width: 656px;
       margin: -30px auto 0;
 
-      h2.hero__title {
+      .hero__title {
         margin: 20px 0;
         font-size: variables.$font-size-xl;
         font-weight: 400;
@@ -77,7 +78,7 @@
         }
       }
 
-      p.hero__description {
+      .hero__description {
         margin: 0;
         font-size: 26px;
         line-height: 1.5;

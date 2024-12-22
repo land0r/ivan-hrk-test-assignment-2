@@ -4,7 +4,7 @@
 .reviews {
   background: linear-gradient(180deg, variables.$light-gray-color 0%, variables.$white-color 100%);
 
-  .reviews__list {
+  &__list {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -22,6 +22,7 @@
       border-radius: 6px;
       border: 1px solid variables.$border-color;
       background: variables.$white-color;
+      height: fit-content;
 
       @include mixins.respond-to(medium) {
         flex: 0 0 100%;
